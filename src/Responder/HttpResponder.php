@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace Shrikeh\AdrContracts\Responder;
 
 use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
 use Shrikeh\AdrContracts\Responder;
 use Shrikeh\App\Message\Result;
 
@@ -22,5 +23,7 @@ use Shrikeh\App\Message\Result;
  */
 interface HttpResponder extends Responder
 {
-    public function respond(?Result $result = null): ResponseInterface;
+    public function respond(ServerRequestInterface $request, ?Result $result = null): ResponseInterface;
+
+    public function supports(ServerRequestInterface $request, Result $result = null): bool;
 }

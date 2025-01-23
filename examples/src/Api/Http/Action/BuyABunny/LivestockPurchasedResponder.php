@@ -16,6 +16,7 @@ namespace Examples\Api\Http\Action\BuyABunny;
 use Examples\App\Result\LivestockPurchased;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
 use Shrikeh\AdrContracts\Responder\Exception\UnsupportedResultType;
 use Shrikeh\AdrContracts\Responder\HttpResponder;
 use Shrikeh\App\Message\Result;
@@ -31,19 +32,19 @@ final readonly class LivestockPurchasedResponder implements HttpResponder
     {
     }
 
-    public function respond(?Result $result = null): ResponseInterface
+    public function respond(ServerRequestInterface $request, ?Result $result = null): ResponseInterface
     {
-        if (!($result && $this->supports($result))) {
+        if (!$this->supports($request, $result)) {
             throw new UnsupportedResultType($this, $result);
         }
-
 
         return $this->responseFactory->createResponse(
             StatusCode::CREATED
         );
     }
 
-    public function supports(Result $result): bool
+
+    public function supports(ServerRequestInterface $request, Result $result = null): bool
     {
         return $result instanceof LivestockPurchased;
     }

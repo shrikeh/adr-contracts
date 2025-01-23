@@ -20,5 +20,4 @@ use Shrikeh\App\Message\Result;
  */
 interface Responder
 {
-    public function supports(Result $result): bool;
 }
