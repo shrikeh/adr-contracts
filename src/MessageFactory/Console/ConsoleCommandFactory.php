@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace Shrikeh\AdrContracts\MessageFactory\Http;
+namespace Shrikeh\AdrContracts\MessageFactory\Console;
 
 use Shrikeh\AdrContracts\MessageFactory\ConsoleMessageFactory;
 use Shrikeh\App\Message\Command;
