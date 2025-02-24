@@ -13,14 +13,15 @@ declare(strict_types=1);
 
 namespace Shrikeh\AdrContracts\Action;
 
-use Shrikeh\AdrContracts\Action\Exception\ActionException;
+
+use Shrikeh\AdrContracts\Action;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
  * @author Barney Hanlon <symfony@shrikeh.net>
  */
-interface ConsoleAction extends ActionException
+interface ConsoleAction extends Action
 {
     public function run(InputInterface $input, OutputInterface $output): int;
 }
