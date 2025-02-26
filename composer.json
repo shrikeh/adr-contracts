@@ -28,20 +28,6 @@
     "symfony/dotenv": "*",
     "symfony/runtime": "^7.2"
   },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/shrikeh/common-app"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/shrikeh/app-symfony"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/shrikeh/symfony-api-context"
-    }
-  ],
   "autoload": {
     "psr-4": {
       "Examples\\": "examples/src",
