@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace Shrikeh\AdrContracts\MessageFactory\Http\Exception;
+namespace Shrikeh\AdrContracts\MessageFactory\Console\Exception;
 
 use Shrikeh\AdrContracts\MessageFactory\Exception\MessageFactoryException;
 
