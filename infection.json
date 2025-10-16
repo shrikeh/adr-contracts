@@ -2,14 +2,14 @@
   "$schema": "vendor/infection/infection/resources/schema.json",
   "source": {
     "directories": [
-      "app/src"
+      "src"
     ],
     "excludes": [
       "DependencyInjection"
     ]
   },
   "logs": {
-    "text": "build/logs/infection.log",
+    "text": ".build/logs/infection.log",
     "stryker": {
       "report": "main"
     }

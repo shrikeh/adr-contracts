@@ -15,7 +15,7 @@ namespace Shrikeh\AdrContracts\Responder\Exception;
 
 use InvalidArgumentException;
 use Shrikeh\AdrContracts\Responder;
-use Shrikeh\App\Message\Result;
+use Shrikeh\Cqrs\Message\Result;
 
 /**
  * @author Barney Hanlon <symfony@shrikeh.net>
@@ -31,9 +31,9 @@ final class UnsupportedResultType extends InvalidArgumentException implements Re
         parent::__construct(
             sprintf(
                 self::MSG,
-            get_class($this->responder),
-            $this->result ? get_class($this->result) : 'null'
-            )
+                get_class($this->responder),
+                $this->result ? get_class($this->result) : 'null'
+            ),
         );
     }
 }

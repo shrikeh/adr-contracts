@@ -13,8 +13,6 @@ declare(strict_types=1);
 
 namespace Shrikeh\AdrContracts;
 
-use Shrikeh\App\Message\Result;
-
 /**
  * @author Barney Hanlon <symfony@shrikeh.net>
  */
