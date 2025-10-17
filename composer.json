@@ -19,7 +19,7 @@
     "deptrac/deptrac": "^4.2",
     "ergebnis/composer-normalize": "^2.48",
     "friends-of-behat/service-container-extension": "^1.1",
-    "infection/infection": "^0.29.14",
+    "infection/infection": "^0.31.0",
     "jangregor/phpstan-prophecy": "^2.2",
     "nunomaduro/collision": "^8.8",
     "nunomaduro/collision-adapter-symfony": "^1.3",
