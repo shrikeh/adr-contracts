@@ -1,5 +1,5 @@
 /.dev                           export-ignore
-/.dockerignore                  expoert-ignore
+/.dockerignore                  export-ignore
 /.editorconfig                  export-ignore
 /.env                           export-ignore
 /.envrc                         export-ignore
