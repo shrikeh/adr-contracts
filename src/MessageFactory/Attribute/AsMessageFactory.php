@@ -4,7 +4,15 @@ declare(strict_types=1);
 
 namespace Shrikeh\Adr\MessageFactory\Attribute;
 
-final readonly class AsMessageFaxtory
-{
+use Shrikeh\Adr\MessageFactory\Type;
 
+/**
+ * @SuppressWarnings("PHPMD.NumberOfChildren")
+ * @psalm-api
+ */
+abstract readonly class AsMessageFactory
+{
+    protected function __construct(public Type $type)
+    {
+    }
 }

@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace Shrikeh\Adr\MessageFactory;
 
-final readonly class Type
+enum Type: string
 {
-
+    case COMMAND_FACTORY = 'command.factory';
+    case QUERY_FACTORY = 'query.factory';
 }

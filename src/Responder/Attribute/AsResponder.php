@@ -6,6 +6,9 @@ namespace Shrikeh\Adr\Responder\Attribute;
 
 use Attribute;
 
+/**
+ * @psalm-api
+ */
 #[Attribute(Attribute::TARGET_CLASS)]
 readonly class AsResponder
 {

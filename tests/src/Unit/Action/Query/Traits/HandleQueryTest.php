@@ -18,6 +18,7 @@ use Shrikeh\Cqrs\Message\Result;
 final class HandleQueryTest extends TestCase
 {
     use ProphecyTrait;
+
     public function testItHandlesACommand(): void
     {
         $query = $this->prophesize(Query::class)->reveal();
