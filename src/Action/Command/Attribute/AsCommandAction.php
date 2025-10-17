@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Shrikeh\AdrContracts\Action\Command\Attribute;
+namespace Shrikeh\Adr\Action\Command\Attribute;
 
 use Attribute;
-use Shrikeh\AdrContracts\Action\Attribute\AsAction;
+use Shrikeh\Adr\Action\Attribute\AsAction;
 
 #[Attribute(Attribute::TARGET_CLASS)]
 readonly class AsCommandAction extends AsAction

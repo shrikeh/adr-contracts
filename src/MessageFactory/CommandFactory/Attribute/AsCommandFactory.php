@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Shrikeh\AdrContracts\MessageFactory\CommandFactory\Attribute;
+namespace Shrikeh\Adr\MessageFactory\CommandFactory\Attribute;
 
 use Attribute;
 

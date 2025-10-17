@@ -1,30 +1,8 @@
-/.*
-!/.env
-!/.git*
-!/.editorconfig
-/auth.json
-###> symfony/framework-bundle ###
-/.env.local
-/.env.local.php
-/.env.*.local
-/app/config/secrets/prod/prod.decrypt.private.php
-/app/public/bundles/
-/build/
 /vendor/
-###< symfony/framework-bundle ###
+/.build
+/.idea
+/.venv
+/.env.*
+/.envrc.*
+/auth.json
 
-###> squizlabs/php_codesniffer ###
-/phpcs.xml
-###< squizlabs/php_codesniffer ###
-
-###> phpstan/phpstan ###
-phpstan.neon
-###< phpstan/phpstan ###
-
-###> phpunit/phpunit ###
-/phpunit.xml
-###< phpunit/phpunit ###
-
-###> baldinof/roadrunner-bundle ###
-/bin/rr
-###< baldinof/roadrunner-bundle ###

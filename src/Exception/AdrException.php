@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace Shrikeh\AdrContracts\Exception;
+namespace Shrikeh\Adr\Exception;
 
 use Throwable;
 

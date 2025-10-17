@@ -1,0 +1,21 @@
+if command -v brew >/dev/null 2>&1; then
+
+  PATH_add "$(brew --prefix make)/libexec/gnubin"
+
+  path_add PKG_CONFIG_PATH "$(brew --prefix gmp)/lib/pkgconfig"
+  path_add PKG_CONFIG_PATH "$(brew --prefix icu4c)/lib/pkgconfig"
+  path_add PKG_CONFIG_PATH "$(brew --prefix jpeg)/lib/pkgconfig"
+  path_add PKG_CONFIG_PATH "$(brew --prefix libpng)/lib/pkgconfig"
+  path_add PKG_CONFIG_PATH "$(brew --prefix libpq)/lib/pkgconfig"
+  path_add PKG_CONFIG_PATH "$(brew --prefix libtiff)/lib/pkgconfig"
+  path_add PKG_CONFIG_PATH "$(brew --prefix libyaml)/lib/pkgconfig"
+  path_add PKG_CONFIG_PATH "$(brew --prefix mpfr)/lib/pkgconfig"
+  path_add PKG_CONFIG_PATH "$(brew --prefix ncurses)/lib/pkgconfig"
+  path_add PKG_CONFIG_PATH "$(brew --prefix openssl)/lib/pkgconfig"
+  path_add PKG_CONFIG_PATH "$(brew --prefix readline)/lib/pkgconfig"
+  path_add PKG_CONFIG_PATH "$(brew --prefix unixodbc)/lib/pkgconfig"
+  path_add PKG_CONFIG_PATH "$(brew --prefix webp)/lib/pkgconfig"
+
+  export PHP_CONFIGURE_OPTIONS="--with-yaml=$(brew --prefix libyaml) --with-openssl=$(brew --prefix openssl) --with-iconv=$(brew --prefix libiconv)"
+
+fi

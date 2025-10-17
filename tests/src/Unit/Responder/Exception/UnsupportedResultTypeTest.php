@@ -14,10 +14,10 @@ declare(strict_types=1);
 namespace Tests\Unit\Responder\Exception;
 
 use Prophecy\PhpUnit\ProphecyTrait;
-use Shrikeh\AdrContracts\Responder;
-use Shrikeh\AdrContracts\Responder\Exception\UnsupportedResultType;
+use Shrikeh\Adr\Responder;
+use Shrikeh\Adr\Responder\Exception\UnsupportedResultType;
 use PHPUnit\Framework\TestCase;
-use Shrikeh\App\Message\Result;
+use Shrikeh\Cqrs\Message\Result;
 
 /**
  * @author Barney Hanlon <symfony@shrikeh.net>
@@ -33,7 +33,17 @@ final class UnsupportedResultTypeTest extends TestCase
 
         $unexpectedResultType = new UnsupportedResultType($responder, $result);
         $this->assertSame(
-            sprintf(UnsupportedResultType::MSG, get_class($responder), get_class($result)),
+            sprintf(UnsupportedResultType::MSG_FORMAT, get_class($responder), get_class($result)),
+            $unexpectedResultType->getMessage(),
+        );
+    }
+
+    public function testItDoesNotNeedARresult(): void
+    {
+        $responder = $this->prophesize(Responder::class)->reveal();
+        $unexpectedResultType = new UnsupportedResultType($responder);
+        $this->assertSame(
+            sprintf(UnsupportedResultType::MSG_FORMAT, get_class($responder), 'null'),
             $unexpectedResultType->getMessage(),
         );
     }

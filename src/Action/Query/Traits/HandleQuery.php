@@ -2,7 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Shrikeh\AdrContracts\Action\Query\Traits;
+namespace Shrikeh\Adr\Action\Query\Traits;
+
+use Shrikeh\Adr\Action\Query\Exception\ErrorRunningQuery;
+use Shrikeh\Cqrs\Bus\QueryBus;
+use Shrikeh\Cqrs\Bus\QueryBus\Exception\QueryBusException;
+use Shrikeh\Cqrs\Message\Query;
+use Shrikeh\Cqrs\Message\Result;
 
 trait HandleQuery
 {

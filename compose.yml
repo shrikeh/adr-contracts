@@ -1,0 +1,17 @@
+---
+services:
+  cqrs:
+    container_name: "${PHP_CONTAINER?err}"
+    image: "${IMAGE}"
+    working_dir: "/shrikeh"
+    volumes:
+      - "./:/shrikeh"
+      - "./.build/xdebug:/var/log/xdebug"
+  gomplate:
+    container_name: gomplate
+    image: hairyhenderson/gomplate:latest
+    profiles:
+      - templates
+    volumes:
+      - "./.dev/templates:/templates:ro"
+      - "./:/output"

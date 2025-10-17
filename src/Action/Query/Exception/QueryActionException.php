@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Shrikeh\AdrContracts\Action\Query\Exception;
+namespace Shrikeh\Adr\Action\Query\Exception;
 
-use Shrikeh\AdrContracts\Action\Exception\ActionException;
+use Shrikeh\Adr\Action\Exception\ActionException;
 
 interface QueryActionException extends ActionException
 {

@@ -1,0 +1,49 @@
+---
+# grumphp.yml
+grumphp:
+  parallel:
+    enabled: true
+    max_workers: 32
+  stop_on_failure: false
+  ignore_unstaged_changes: false
+  hide_circumvention_tip: false
+  process_timeout: 60
+  additional_info: ~
+  hooks_dir: .dev/hooks
+  git_hook_variables:
+    EXEC_GRUMPHP_COMMAND:
+      - 'docker'
+      - 'compose'
+      - 'run'
+      - '--rm'
+      - '--no-deps'
+      - 'cqrs'
+  tasks:
+    composer:
+      file: ./composer.json
+    composer_normalize:
+    phplint:
+      exclude:
+        - vendor
+        - docs
+        - ..build
+      jobs: ~
+      short_open_tag: false
+      ignore_patterns: []
+      triggered_by: ['php']
+    rector:
+      config: null
+      triggered_by: ['php']
+      ignore_patterns: []
+      clear_cache: true
+      no_diffs: false
+    psalm:
+    yamllint:
+      whitelist_patterns: []
+      ignore_patterns: []
+      object_support: false
+      exception_on_invalid_type: false
+      parse_constant: false
+      parse_custom_tags: false
+    paratest:
+      verbose: true

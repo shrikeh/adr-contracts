@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Shrikeh\AdrContracts;
+namespace Shrikeh\Adr;
 
 interface MessageFactory
 {

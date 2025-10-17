@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace Shrikeh\AdrContracts;
+namespace Shrikeh\Adr;
 
 /**
  * @author Barney Hanlon <symfony@shrikeh.net>

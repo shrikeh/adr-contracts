@@ -11,10 +11,10 @@
 
 declare(strict_types=1);
 
-namespace Shrikeh\AdrContracts\Responder\Exception;
+namespace Shrikeh\Adr\Responder\Exception;
 
 use InvalidArgumentException;
-use Shrikeh\AdrContracts\Responder;
+use Shrikeh\Adr\Responder;
 use Shrikeh\Cqrs\Message\Result;
 
 /**
@@ -22,7 +22,7 @@ use Shrikeh\Cqrs\Message\Result;
  */
 final class UnsupportedResultType extends InvalidArgumentException implements ResponderException
 {
-    public const string MSG = 'Responder of type %s does not support result of type %s';
+    public const string MSG_FORMAT = 'Responder of type %s does not support result of type %s';
 
     public function __construct(
         public readonly Responder $responder,
@@ -30,7 +30,7 @@ final class UnsupportedResultType extends InvalidArgumentException implements Re
     ) {
         parent::__construct(
             sprintf(
-                self::MSG,
+                self::MSG_FORMAT,
                 get_class($this->responder),
                 $this->result ? get_class($this->result) : 'null'
             ),

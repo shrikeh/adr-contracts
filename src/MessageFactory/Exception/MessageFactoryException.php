@@ -11,9 +11,9 @@
 
 declare(strict_types=1);
 
-namespace Shrikeh\AdrContracts\MessageFactory\Exception;
+namespace Shrikeh\Adr\MessageFactory\Exception;
 
-use Shrikeh\AdrContracts\Exception\AdrException;
+use Shrikeh\Adr\Exception\AdrException;
 
 /**
  * @author Barney Hanlon <symfony@shrikeh.net>

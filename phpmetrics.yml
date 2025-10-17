@@ -1,9 +1,13 @@
 ---
-composer: true  # Analyse the composer.* files
-includes:  #  directory and files to analyze, relative to config file directory
-  - "src"
+composer: true # Analyse the composer.* files
+includes: #  directory and files to analyze, relative to config file directory
+  - "."
 excludes: # regex of files (or directory) to exclude from analyze
   - tests
+  - docs
+  - vendor
+  - .dev
+  - .build
 extensions: # default: ["php", "inc"]
   - php
 report: # list of reports to generate
@@ -11,9 +15,8 @@ report: # list of reports to generate
   csv: "docs/metrics/report.csv"
   json: "docs/metrics/report.json"
   violations: "docs/metrics/violations.xml"
-
 plugins:
   git:
     binary: git # if defined, runs git analyze
   junit:
-    file: "build/logs/junit.xml" # if defined, analyze junit report
+    file: ".build/coverage/junit.xml" # if defined, analyze junit report

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Shrikeh\AdrContracts\Action;
+namespace Shrikeh\Adr\Action;
 
-use Shrikeh\AdrContracts\Action;
+use Shrikeh\Adr\Action;
 
 interface CommandAction extends Action
 {

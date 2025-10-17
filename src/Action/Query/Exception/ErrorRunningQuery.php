@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Shrikeh\AdrContracts\Action\Query\Exception;
+namespace Shrikeh\Adr\Action\Query\Exception;
 
 use RuntimeException;
 use Shrikeh\Cqrs\Bus\QueryBus\Exception\QueryBusException;

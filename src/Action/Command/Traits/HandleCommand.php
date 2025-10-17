@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Shrikeh\AdrContracts\Action\Action\Traits;
+namespace Shrikeh\Adr\Action\Command\Traits;
 
-use Shrikeh\AdrContracts\Action\Command\Exception\ErrorRunningCommand;
+use Shrikeh\Adr\Action\Command\Exception\ErrorRunningCommand;
 use Shrikeh\Cqrs\Bus\CommandBus;
 use Shrikeh\Cqrs\Bus\CommandBus\Exception\CommandBusException;
 use Shrikeh\Cqrs\Message\Command;

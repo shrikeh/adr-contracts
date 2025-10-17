@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Shrikeh\AdrContracts\Responder\Attribute;
+namespace Shrikeh\Adr\Responder\Attribute;
 
 use Attribute;
 

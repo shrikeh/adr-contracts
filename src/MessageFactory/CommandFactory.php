@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Shrikeh\AdrContracts\MessageFactory;
+namespace Shrikeh\Adr\MessageFactory;
 
-use Shrikeh\AdrContracts\MessageFactory;
+use Shrikeh\Adr\MessageFactory;
 
 interface CommandFactory extends MessageFactory
 {
