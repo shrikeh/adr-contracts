@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "948e4cb3ab684198f87f0c5b899710f2",
+    "content-hash": "9e171e2418b2ede4ad5f6bfbc2df5d57",
     "packages": [
         {
             "name": "shrikeh/cqrs",
@@ -11345,7 +11345,9 @@
     },
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": {},
+    "platform": {
+        "php": "^8.4"
+    },
     "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
