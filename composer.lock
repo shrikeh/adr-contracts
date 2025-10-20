@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9e171e2418b2ede4ad5f6bfbc2df5d57",
+    "content-hash": "c4e4cd80481477957392392b515961b3",
     "packages": [
         {
             "name": "shrikeh/cqrs",
-            "version": "0.2.0",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/shrikeh/php-cqrs.git",
-                "reference": "7aeed0476fd6083074bd223d38b9274dbd8416d0"
+                "reference": "3f12c070f27aa2848e4c96ba0cd7328019e205f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shrikeh/php-cqrs/zipball/7aeed0476fd6083074bd223d38b9274dbd8416d0",
-                "reference": "7aeed0476fd6083074bd223d38b9274dbd8416d0",
+                "url": "https://api.github.com/repos/shrikeh/php-cqrs/zipball/3f12c070f27aa2848e4c96ba0cd7328019e205f2",
+                "reference": "3f12c070f27aa2848e4c96ba0cd7328019e205f2",
                 "shasum": ""
             },
             "require": {
@@ -71,9 +71,9 @@
             "description": "Contracts for CQRS-style applications",
             "support": {
                 "issues": "https://github.com/shrikeh/php-cqrs/issues",
-                "source": "https://github.com/shrikeh/php-cqrs/tree/0.2.0"
+                "source": "https://github.com/shrikeh/php-cqrs/tree/0.3.0"
             },
-            "time": "2025-10-17T10:28:37+00:00"
+            "time": "2025-10-20T10:42:48+00:00"
         }
     ],
     "packages-dev": [
