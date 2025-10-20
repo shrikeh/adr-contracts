@@ -3,6 +3,7 @@
 /.idea
 /.venv
 /.env.*
+/.envrc
 /.envrc.*
 /auth.json
 

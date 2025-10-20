@@ -15,17 +15,23 @@ function check_composer_auth_token() {
 
     if [ ! -f "${AUTH_FILE_PATH}" ]; then
       # Create a local auth file for now
-      docker compose run --remove-orphans --quiet --rm \
-        -e GITHUB_TOKEN="${GITHUB_TOKEN}" gomplate \
+      docker run --quiet --rm \
+        -v "${PROJECT_ROOT}/.dev/templates:/templates:ro" \
+        -v "${PROJECT_ROOT}:/output" \
+        -e GITHUB_TOKEN="${GITHUB_TOKEN}" \
+        hairyhenderson/gomplate:latest \
         --file "/templates/${TEMPLATE}" --out "/output/${AUTH_FILE}";
     fi
 
   COMPOSER_AUTH="$(jq -c . < ${AUTH_FILE_PATH})"
 
-  docker compose run --quiet --remove-orphans --rm \
-    -e COMPOSER_AUTH="${COMPOSER_AUTH}" \
-    -e GITHUB_TOKEN="${GITHUB_TOKEN}" \
-    gomplate --file "/templates/.env.auth.tmpl" --out "/output/.env.auth";
+      docker run --quiet --rm \
+        -v "${PROJECT_ROOT}/.dev/templates:/templates:ro" \
+        -v "${PROJECT_ROOT}:/output" \
+        -e COMPOSER_AUTH="${COMPOSER_AUTH}" \
+        -e GITHUB_TOKEN="${GITHUB_TOKEN}" \
+        hairyhenderson/gomplate:latest \
+        --file "/templates/.env.auth.tmpl" --out "/output/.env.auth";
 
   return 0;
 }
