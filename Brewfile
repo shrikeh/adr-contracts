@@ -1,7 +1,11 @@
+brew "colima"
+brew "gh"
+brew "jq"
 brew "make"
 brew "direnv"
 brew "libyaml"
 brew "mise"
 brew "openssl"
+brew "pre-commit"
 
 cask "docker-desktop"

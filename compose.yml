@@ -4,6 +4,7 @@ services:
     container_name: "${PHP_CONTAINER?err}"
     image: "${IMAGE}"
     working_dir: "/shrikeh"
+
     volumes:
       - "./:/shrikeh"
       - "./.build/xdebug:/var/log/xdebug"

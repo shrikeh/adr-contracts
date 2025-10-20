@@ -1,6 +1,14 @@
 #!make
 .ONESHELL:
 
+.colima-start:
+	colima start --runtime docker >/dev/null 2>&1 || true;
+
+.colima-context:
+	 docker context use colima;
+
+colima: .colima-start
+
 push-image:
 	$(info [+] Make: Pushing to ghcr.io...)
 	docker compose --profile php push
